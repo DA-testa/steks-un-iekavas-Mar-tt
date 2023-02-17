@@ -20,11 +20,11 @@ def find_mismatch(text):
         if next in ")]}":
           number = ")]}".index(next)
           match number: 
-            case 1:
+            case 0:
             skobka = "("
-            case 2:
+            case 1:
             skobka = "["
-            case 3:
+            case 2:
             skobka = "{"
             if len(opening_brackets_stack)>0 and opening_brackets_stack.peek() == skobka:
                 opening_brackets_stack.pop()
