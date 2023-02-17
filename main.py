@@ -29,7 +29,7 @@ def find_mismatch(text):
           if (len(opening_brackets_stack)>0) and (len(opening_brackets_stack)-1 == skobka):
               opening_brackets_stack.pop()
           else: return i+1
-        if len(opening_brackets_stack)==0:
+        if opening_brackets_stack.isEmpty():
             return -2;
         # else: return len(text)
         
