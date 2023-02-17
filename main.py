@@ -21,14 +21,14 @@ def find_mismatch(text):
           number = ")]}".index(next)
           match number: 
             case 0:
-            skobka = "("
+              skobka = "("
             case 1:
-            skobka = "["
+              skobka = "["
             case 2:
-            skobka = "{"
-            if len(opening_brackets_stack)>0 and opening_brackets_stack.peek() == skobka:
-                opening_brackets_stack.pop()
-            else: return i+1
+              skobka = "{"
+          if (len(opening_brackets_stack)>0) and (opening_brackets_stack.peek() == skobka):
+              opening_brackets_stack.pop()
+          else: return i+1
         if len(opening_brackets_stack)==0:
             return -2;
         else: return len(text)
@@ -38,7 +38,7 @@ def find_mismatch(text):
 
 def main():
     wait = input()
-    if ("I" in wait)
+    if ("I" in wait):
         text = input()
         mismatch = find_mismatch(text)
         if mismatch == -2:
