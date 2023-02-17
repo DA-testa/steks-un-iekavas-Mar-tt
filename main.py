@@ -30,7 +30,7 @@ def find_mismatch(text):
               opening_brackets_stack.pop()
           else: 
             return i+1
-          if (len(opening_brackets_stack) == 0):
+        if (len(opening_brackets_stack) == 0):
             return -1;
         # else: return len(text)
         
