@@ -28,7 +28,7 @@ def find_mismatch(text):
               skobka = "{"
           if (len(opening_brackets_stack)>0) and (len(opening_brackets_stack) == skobka):
               opening_brackets_stack.pop()
-          else: 
+          if (len(opening_brackets_stack)<0) or (len(opening_brackets_stack) != skobka): 
             return i+1
         if (len(opening_brackets_stack) == 0):
             return -1;
