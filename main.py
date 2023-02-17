@@ -30,8 +30,8 @@ def find_mismatch(text):
               opening_brackets_stack.pop()
           else: 
             return i+1
-        if (len(opening_brackets_stack) == 0):
-            return -2;
+          if (len(opening_brackets_stack) == 0):
+            return -1;
         # else: return len(text)
         
           
@@ -42,7 +42,7 @@ def main():
     if ("I" in wait):
         text = input()
         mismatch = find_mismatch(text)
-        if mismatch == -2:
+        if mismatch == -1:
             print("Success")
         else:
             print(mismatch)
