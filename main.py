@@ -26,12 +26,12 @@ def find_mismatch(text):
               skobka = "["
             case 2:
               skobka = "{"
-          if (len(opening_brackets_stack)>0) and (len(opening_brackets_stack)-len(opening_brackets_stack)+1 == skobka):
+          if (len(opening_brackets_stack)>0) and (len(opening_brackets_stack)-1 == skobka):
               opening_brackets_stack.pop()
           else: 
             return i+1
         if (len(opening_brackets_stack) == 0):
-            return -1;
+            return -2;
         # else: return len(text)
         
           
@@ -42,7 +42,7 @@ def main():
     if ("I" in wait):
         text = input()
         mismatch = find_mismatch(text)
-        if mismatch == -1:
+        if mismatch == -2:
             print("Success")
         else:
             print(mismatch)
