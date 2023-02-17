@@ -14,7 +14,7 @@ def find_mismatch(text):
     opening_brackets_stack = []
     for i, next in enumerate(text):
         if next in "([{":
-            opening_brackets_stack.push(Bracket(next, i+1))
+            opening_brackets_stack.append(i)
             
 
         if next in ")]}":
@@ -30,7 +30,7 @@ def find_mismatch(text):
                 opening_brackets_stack.pop()
             else: return i+1
         if len(opening_brackets_stack)==0:
-            return 0;
+            return -2;
         else: return len(text)
         
           
@@ -41,7 +41,7 @@ def main():
     if ("I" in wait)
         text = input()
         mismatch = find_mismatch(text)
-        if mismatch == 0:
+        if mismatch == -2:
             print("Success")
         else:
             print(mismatch)
