@@ -25,7 +25,7 @@ def find_mismatch(text):
             case 1:
               skobka = "["
             case 2:
-              skobka = "{
+              skobka = "{"
           if (len(opening_brackets_stack)>0) and (opening_brackets_stack.index(len(opening_brackets_stack)-len(opening_brackets_stack)+1)== skobka):
               opening_brackets_stack.pop()
           else: 
