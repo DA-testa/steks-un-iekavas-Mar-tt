@@ -31,8 +31,9 @@ def find_mismatch(text):
             else: 
                 return i+1
         if (len(opening_brackets_stack) == 0):
-            return -2;
-        else: return len(text) 
+            return -2
+        else: 
+            return len(text) 
         
           
           
