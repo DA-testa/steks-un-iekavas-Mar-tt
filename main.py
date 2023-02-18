@@ -48,7 +48,7 @@ def main():
             #     if (i>=1999):
             #         print("972")
             #     else:
-            #         print("Success")
+                    print("Success")
         else:
             print(mismatch)
 
