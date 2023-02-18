@@ -32,7 +32,7 @@ def find_mismatch(text):
                 return i+1
         if (len(opening_brackets_stack) == 0):
             return -2;
-       
+        else: return len(text) 
         
           
           
@@ -43,11 +43,11 @@ def main():
         text = input()
         mismatch = find_mismatch(text)
         if mismatch == -2:
-            for i, next in enumerate(text):
-                if (i>=1999):
-                    print("972")
-                else:
-                    print("Success")
+            # for i, next in enumerate(text):
+            #     if (i>=1999):
+            #         print("972")
+            #     else:
+            #         print("Success")
         else:
             print(mismatch)
 
