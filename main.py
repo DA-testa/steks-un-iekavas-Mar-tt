@@ -18,21 +18,22 @@ def find_mismatch(text):
             
 
         if next in ")]}":
-            number = ")]}".index(next)
-            match number: 
-                case 0:
-                    skobka = "("
-                case 1:
-                    skobka = "["
-                case 2:
-                    skobka = "{"
+            
+            if(next == ")"):
+                skobka = "("
+            if(next == "]"):
+                skobka = "["
+            if(next == "}"):
+                skobka = "{"
+            
             if (len(opening_brackets_stack)>0) and (opening_brackets_stack[len(opening_brackets_stack)-1] == skobka):
                 opening_brackets_stack.pop()
             else: 
                 return i+1
         if (len(opening_brackets_stack) == 0):
             return -2
-        
+        else:
+            return len(text)
           
           
 
@@ -42,10 +43,10 @@ def main():
         text = input()
         mismatch = find_mismatch(text)
         if mismatch == -2:
-            for i, next in enumerate(text):
-                if (i>=1999):
-                    print("972")
-                else:
+            # for i, next in enumerate(text):
+            #     if (i>=1999):
+            #         print("972")
+            #     else:
                     print("Success")
         else:
             print(mismatch)
